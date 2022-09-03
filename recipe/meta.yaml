@@ -15,25 +15,37 @@ source:
 build:
   merge_build_host: true  # [win]
   number: 0
-  noarch: generic
   rpaths:
     - lib/R/lib/
     - lib/
 
 requirements:
   build:
+    - {{ compiler('c') }}              # [not win]
+    - {{ compiler('m2w64_c') }}        # [win]
+    - {{ compiler('cxx') }}            # [not win]
+    - {{ compiler('m2w64_cxx') }}      # [win]
+    - {{ posix }}filesystem        # [win]
+    - {{ posix }}make
+    - {{ posix }}sed               # [win]
+    - {{ posix }}coreutils         # [win]
     - {{ posix }}zip               # [win]
     - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
+    - r-rcpp
     - r-base64enc
+    - r-curl
     - r-digest
     - r-httr
     - r-jsonlite
     - r-xml2
   run:
     - r-base
+    - {{ native }}gcc-libs         # [win]
+    - r-rcpp
     - r-base64enc
+    - r-curl
     - r-digest
     - r-httr
     - r-jsonlite
@@ -49,7 +61,8 @@ about:
   license: Apache-2.0
   summary: Functions for making low-level API requests to Amazon Web Services <https://aws.amazon.com>. The functions handle building, signing, and sending requests, and receiving responses. They are designed to help build higher-level interfaces to individual services, such as Simple Storage Service (S3).
   license_family: APACHE
-  license_file: LICENSE.txt
+  license_file:
+    - LICENSE.txt
 
 extra:
   recipe-maintainers:

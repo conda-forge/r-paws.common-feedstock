@@ -1,11 +1,11 @@
-About r-paws.common
-===================
+About r-paws.common-feedstock
+=============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-paws.common-feedstock/blob/main/LICENSE.txt)
 
 Home: https://CRAN.R-project.org/package=paws.common
 
 Package license: Apache-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-paws.common-feedstock/blob/main/LICENSE.txt)
 
 Summary: Functions for making low-level API requests to Amazon Web Services <https://aws.amazon.com>. The functions handle building, signing, and sending requests, and receiving responses. They are designed to help build higher-level interfaces to individual services, such as Simple Storage Service (S3).
 

@@ -1,4 +1,4 @@
-{% set version = "0.7.3" %}
+{% set version = "0.7.4" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/paws.common_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/paws.common/paws.common_{{ version }}.tar.gz
-  sha256: 15244a1bb42a5e4ecf95a30134afaf06262226b42668eb862d5d42c95bd3fdc0
+  sha256: 210a51986d7c60e496095fc174eab8139f3bf401b7a4456b8a4951c054a4364b
 
 build:
   merge_build_host: true  # [win]

@@ -3,7 +3,7 @@ About r-paws.common-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-paws.common-feedstock/blob/main/LICENSE.txt)
 
-Home: https://CRAN.R-project.org/package=paws.common
+Home: https://github.com/paws-r/paws
 
 Package license: Apache-2.0
 

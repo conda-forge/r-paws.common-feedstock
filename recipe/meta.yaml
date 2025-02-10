@@ -46,7 +46,6 @@ requirements:
     - r-xml2
   run:
     - r-base
-    - {{ native }}gcc-libs         # [win]
     - r-rcpp
     - r-base64enc
     - r-curl

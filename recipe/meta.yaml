@@ -1,4 +1,4 @@
-{% set version = '0.8.1' %}
+{% set version = "0.8.2" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/paws.common_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/paws.common/paws.common_{{ version }}.tar.gz
-  sha256: 22d9d7b0d5a937439f5d7217d21e42d84d8536c90dc64cacd72ccf675fe0950c
+  sha256: 71ff92f72b35742db6da3eacc9675e16f127e091b15f4fb9b4b714ac0adf176c
 
 build:
   number: 0
@@ -62,10 +62,7 @@ test:
 about:
   home: https://github.com/paws-r/paws
   license: Apache-2.0
-  summary: Functions for making low-level API requests to Amazon Web Services <https://aws.amazon.com>.
-    The functions handle building, signing, and sending requests, and receiving responses.
-    They are designed to help build higher-level interfaces to individual services,
-    such as Simple Storage Service (S3).
+  summary: Functions for making low-level API requests to Amazon Web Services <https://aws.amazon.com>. The functions handle building, signing, and sending requests, and receiving responses. They are designed to help build higher-level interfaces to individual services, such as Simple Storage Service (S3).
   license_family: APACHE
   license_file:
     - LICENSE.txt

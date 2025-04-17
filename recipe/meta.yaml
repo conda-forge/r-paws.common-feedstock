@@ -1,4 +1,4 @@
-{% set version = "0.8.2" %}
+{% set version = "0.8.3" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/paws.common_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/paws.common/paws.common_{{ version }}.tar.gz
-  sha256: 71ff92f72b35742db6da3eacc9675e16f127e091b15f4fb9b4b714ac0adf176c
+  sha256: 79f31cc9f20c5b76427fb186efb5dd340bcb2f250e811d9e05563572f3b2e56b
 
 build:
   number: 0

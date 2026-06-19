@@ -1,4 +1,4 @@
-{% set version = "0.8.9" %}
+{% set version = "0.8.10" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/paws.common_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/paws.common/paws.common_{{ version }}.tar.gz
-  sha256: 42b0fae433ef7fcd28dddf34e67d7d3ff94de4d4e54851f80333ddef324741f9
+  sha256: d5161c4f82b4b046fd26baf17612ef8ad6df5a8a9653dcecad27d4b3672b9370
 
 build:
   number: 0
@@ -41,7 +41,7 @@ requirements:
     - r-base64enc
     - r-curl
     - r-digest
-    - r-httr2
+    - r-httr2 >=1.0.4
     - r-jsonlite
     - r-xml2
   run:
@@ -50,7 +50,7 @@ requirements:
     - r-base64enc
     - r-curl
     - r-digest
-    - r-httr2
+    - r-httr2 >=1.0.4
     - r-jsonlite
     - r-xml2
 
@@ -60,7 +60,8 @@ test:
     - "\"%R%\" -e \"library('paws.common')\""  # [win]
 
 about:
-  home: https://github.com/paws-r/paws
+  home: https://www.paws-r-sdk.com
+  dev_url: https://github.com/paws-r/paws
   license: Apache-2.0
   summary: Functions for making low-level API requests to Amazon Web Services <https://aws.amazon.com>. The functions handle building, signing, and sending requests, and receiving responses. They are designed to help build higher-level interfaces to individual services, such as Simple Storage Service (S3).
   license_family: APACHE
